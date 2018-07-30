@@ -57,8 +57,8 @@ func euler() {
 func triangle() {
 	var a, b int = 3, 4
 	var c int
-	c = int(math.Sqrt(float64(a*a + b*b)))
-	fmt.Println(c) // 5
+	c = int(math.Sqrt(float64(a*a + b*b))) // go 只有强制类型转换
+	fmt.Println(c)                         // 5
 
 }
 
