@@ -1,4 +1,3 @@
-
 > 任何编程语言都有变量,下面来学一学 `go` 的变量与其他语言有什么异同
 
 ### go变量的基本类型
@@ -79,7 +78,55 @@ var (
 	b = "str"
 )
 ```
+-------
+类型转换
+```
+func triangle() {
+	var a, b int = 3, 4
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b))) // go 只有强制类型转换
+	fmt.Println(c)                         // 5
+
+}
+
+```
+注意,这里 `math.Sqrt`里需要传 `float` 类型,而 `go` 是没有隐式转换的,必须显式的转换
+### 常量
+直接看代码吧
+```go
+func consts(){
+	const filename = "abc.txt"
+	const a, b  = 3,4
+	var c int
+	c = int(math.Sqrt(a*a+b*b))
+	fmt.Println(filename,c) // abc.txt 5
+}
+```
+和声明变量一样,只不过关键字改成 `const`, 注意通常其他语言常量都是全大写表示,`go`里不建议这么做,因为 `go`里首字母大写代表是 `public`
+再看一个常量的例子,这里用了 `go`里的一个关键字`iota`(自增值)
+```go
+func enums()  {
+	const (
+		cpp = iota
+		_
+		python
+		golang
+	)
+	const (
+		b = 1 << (10*iota)
+		kb
+		mb
+		gb
+		tb
+	)
+	fmt.Println(cpp,python,golang) // 0 2 3
+	fmt.Println(kb,mb,gb,tb) // 1024 1048576 1073741824 1099511627776
+}
+```
+`iota`默认是0,下面的变量或常量都会依次`+1`,这里`_`代表占位符,以后会经常用到
 ### 总结
-1. `go`没有 long和 double,但是可以指定 int 和 float 的长度,注意 int 不指定是根据系统来的,32位系统就是 int32,64位系统就是 int64,float 必须指定32或者64
-2. `go`可以用 `var` 关键字或者直接 `:=`来声明一个变量
-3. 在函数体外的时候不能用简写,只能用`var`关键字来声明变量
+- `go`没有 long和 double,但是可以指定 int 和 float 的长度,注意 int 不指定是根据系统来的,32位系统就是 int32,64位系统就是 int64,float 必须指定32或者64
+- `go`可以用 `var` 关键字或者直接 `:=`来声明一个变量
+- 在函数体外的时候不能用简写,只能用`var`关键字来声明变量
+- `go` 语言必须显式的强制类型转换
+- `go`里首字母大写的变量或者函数都代表 `public`
