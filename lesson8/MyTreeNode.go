@@ -1,9 +1,9 @@
 package main
 
 import (
-	"golearn/lesson8/tree"
 	"fmt"
 	"golearn/lesson8/queue"
+	"golearn/lesson8/tree"
 )
 
 type MyTreeNode struct {
