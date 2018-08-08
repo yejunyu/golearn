@@ -35,6 +35,11 @@ func main() {
 	fmt.Println("后序遍历")
 	myRoot := MyTreeNode{&root}
 	myRoot.postOrder()
+	count := 0
+	root.TraverseFunc(func(node *tree.Node) {
+		count++
+	})
+	fmt.Println("count: ", count)
 
 	s := queue.Queue{1, 3, 5, 7, 9}
 	s.Push(11)
