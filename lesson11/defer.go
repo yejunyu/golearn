@@ -29,7 +29,21 @@ func writeFile(filename string) {
 	}
 }
 
+func openFile(path string) string {
+	file, err := os.Open(path)
+	// 对已知的问题的处理
+	if err != nil {
+		if pathError, ok := err.(*os.PathError); ok {
+			fmt.Println(pathError.Err)
+		} else {
+			// 未知问题特殊处理
+			fmt.Println("Unkown error", err)
+		}
+	}
+	return file.Name()
+}
+
 func main() {
 	tryDefer()
-	writeFile(".fib.txt")
+	writeFile("fib.txt")
 }
