@@ -13,6 +13,8 @@ func BenchmarkTree(b *testing.B) {
 	root.Right = tree.CreateNode(4)
 	root.Right.Left = tree.CreateNode(5)
 	root.Right.Right = tree.CreateNode(6)
+	// 准备数据的时间除外
+	b.ResetTimer()
 	// 2 1 3 3 5 4 6
 	for i := 0; i < b.N; i++ {
 		root.TraverseFunc(func(node *tree.Node) {
