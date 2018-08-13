@@ -1,4 +1,8 @@
-[toc]
+#### Table of contents
+- [字符串长度](#字符串长度)
+- [遍历](#遍历)
+- [总结](#总结)
+
 ### 字符串长度
 ```go
 s := "神奇大叶子" // UTF-8
@@ -50,3 +54,6 @@ utf8还有很多方法,可以自行尝试
     - Contains,Index
     - ToLower,ToUpper
     - Trim,TrimRight,TrimLeft
+
+
+
