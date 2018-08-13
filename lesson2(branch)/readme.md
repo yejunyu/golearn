@@ -1,4 +1,9 @@
-[toc]
+#### Table of contents
+- [if](#if)
+- [switch](#switch)
+- [for](#for)
+- [总结](#总结)
+
 ### if
 先看一个最常见的 `if` `else`分支
 ```go
@@ -105,3 +110,6 @@ func forever() {
 - `if`条件里也可以定义变量
 - 没有`while`
 - `switch`不需要`break`,也可以直接`switch`多个条件,条件写`case`里
+
+
+
