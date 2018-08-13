@@ -1,3 +1,9 @@
+#### Table of contents
+- [defer](#defer)
+- [异常处理](#异常处理)
+- [统一的异常处理](#统一的异常处理)
+- [recover](#recover)
+- [总结](#总结)
 
 ### defer
 `go`里有个关键字`defer`
@@ -258,3 +264,6 @@ func tryRecover() {
 - 异常处理要用到 `defer`,`panic`,`recover`
 - `go`是互联网时代的`c`,`panic`,`recover`都是`c`过来的思想,其实就是`try`,`catch`
 - 意料之中的错误用 `err`, 意想不到的问题才 `panic`(尽量不要用)
+
+
+
