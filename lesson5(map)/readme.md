@@ -1,3 +1,9 @@
+#### Table of contents
+- [声明一个 map](#声明一个-map)
+- [遍历一个 map](#遍历一个-map)
+- [获得一个 value和删除一个 value](#获得一个-value和删除一个-value)
+    - [删除一个元素](#删除一个元素)
+- [总结](#总结)
 ### 声明一个 map
 ```go
 
@@ -65,3 +71,5 @@ fmt.Println(age, ok)
 - `map` 使用`哈希表`,必须可以比较相等
 - 除了 `slice,map,function` 的内建类型,都可以作为 `key`, 这是语言内部实现的,不用像 `java` 一样自己重写 `hash` 方法
 - `Struct` 类型里面不包含上述字段的,也可以作为`key`
+
+
