@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"golearn/lesson11/fib"
+	"golearn/lesson11(defer)/fib"
 	"os"
 	"strconv"
 )

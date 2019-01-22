@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golearn/lesson9/mock"
+	"golearn/lesson9(ducktyping)/mock"
 )
 
 type Retriever interface {

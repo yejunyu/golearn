@@ -1,7 +1,7 @@
 package tree
 
 import (
-	"golearn/lesson8/tree"
+	"golearn/lesson8(package)/tree"
 	"testing"
 )
 
