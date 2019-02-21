@@ -16,11 +16,12 @@ m2 := make(map[string]string) // map[]
 var m3 map[string]string // map[]
 fmt.Println(m, m2, m3)
 ```
-三种声明方式,前文说道的,推荐用 `make`, 这里指出一下, `make` 创建的是空 `map`,`var` 声明的没赋值的是 `nil`
+三种声明方式,前文说道的,推荐用 `make`, 这里指出一下, `make` 创建的是空 `map`,`var` 声明的没赋值的是 `nil`，空的map依旧是map，类型是map而不是nil有本质区别
 看段代码
 ```go
 fmt.Println(m2 == nil, m3 == nil)
-false    true
+// false    true
+// 但是这里打印出来都是map[]
 ```
 两者是有区别的,一定要注意
 下面讲讲遍历
