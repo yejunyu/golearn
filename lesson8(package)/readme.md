@@ -3,6 +3,7 @@
 - [扩展](#扩展)
 - [总结](#总结)
 
+
 ### 包管理
 我用过的语言,比如`java`,`python`都是按包来区分命名空间的
 `go`里也是一样
@@ -57,10 +58,9 @@ Alt+P // to uppercase
 Alt+L // to lowercase
 Alt+C // 首字母大写
 
-![](http://oqb4aabpb.bkt.clouddn.com/18-8-5/61538305.jpg)
 把 `tree.go`这个文件移到`tree`这个文件夹下,因为一个文件夹下只能有一个包名, `MyTreeNode`是 `main`包
 
-> 这里有个小插曲,我本来这个包叫 lesson8(package),发现引入后怎么都是报错,才发现,包名不能带括号
+> 这里有个小插曲,我本来这个包叫 lesson8-package,发现引入后怎么都是报错,才发现,包名不能带-号
 
 之前的中序遍历是这样的
 ```go
@@ -77,7 +77,6 @@ func main() {
 }
 
 ```
-![](http://oqb4aabpb.bkt.clouddn.com/18-8-5/86629566.jpg)
 来体验一下`go`的面向接口编程
 ```go
 type MyTreeNode struct {
@@ -162,5 +161,3 @@ func  main(){
 
 ### 总结
 - 要想让其他包能访问你的包,变量和方法首字母大写,代表`public`
-
-
