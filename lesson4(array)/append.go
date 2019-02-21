@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func printSlice(s []int) {
+	fmt.Print(s)
 	fmt.Printf("len=%d, cap=%d\n", len(s), cap(s))
 }
 
@@ -33,6 +34,7 @@ func main() {
 
 	fmt.Println("Deleting elements from slice")
 	s2 = append(s2[:3], s2[4:]...)
+	s3 = append(s2[:3])
 	printSlice(s2)
 
 	fmt.Println("Poping from front")

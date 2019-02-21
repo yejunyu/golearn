@@ -163,10 +163,11 @@ s2 =  [5 6 7]
 记住这个概念
 **Slice 本身没有数据,只是对底层 array 的一个 view**
 来看个图
-![](http://oqb4aabpb.bkt.clouddn.com/FpTOPmxH6q-IdV2mlHLaiQWTEBHo)
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190221163912.png)
 - s1为[2 3 4 5],s2为[5 6 7]
 - slice 可以向后扩展,不可以向前扩展
 - s[i]不可以超越len(s),向后扩展不可以超越cap(s)
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190221161726.png)
 这就是`cap` `capacity(容量)`的概念
 ```go
 fmt.Printf("s1=%v,len(s1)=%d,cap(s1)=%d\n",
@@ -224,6 +225,7 @@ len=66, cap=128
 
 还有一种创建数组的方法`make`
 ```
+// s1 = [2,3,4,5]
 s2 = make([]int, 16)
 s3 = make([]int, 10, 32)
 printSlice(s2)
@@ -247,6 +249,7 @@ fmt.Println(s2)
 ```go
 fmt.Println("Deleting elements from slice")
 s2 = append(s2[:3], s2[4:]...)
+// 这里s2[4:]...，...代表不定参（参考第四章函数不定参的讲解）
 printSlice(s2)
 
 fmt.Println("Poping from front")
