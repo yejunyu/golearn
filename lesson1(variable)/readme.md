@@ -22,6 +22,7 @@ e<sup>iπ</sup>+1=0
 ```go
 func euler() {
 	fmt.Println(cmplx.Pow(math.E, 1i*math.Pi) + 1)
+	// Exp表示以e为底
 	fmt.Println(cmplx.Exp(1i*math.Pi) + 1)
 	// (0+1.2246467991473515e-16i)
 }
