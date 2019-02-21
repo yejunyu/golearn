@@ -67,10 +67,12 @@ fmt.Println("Deleting values")
 delete(m, "age")
 age, ok := m["age"]
 fmt.Println(age, ok)
+
+// Deleting values
+//  false
 ```
 ### 总结
-- `map` 使用`哈希表`,必须可以比较相等
-- 除了 `slice,map,function` 的内建类型,都可以作为 `key`, 这是语言内部实现的,不用像 `java` 一样自己重写 `hash` 方法
+- `map` 使用`哈希表`,`key`必须是可以比较相等的类型比如`int`,`string`
+- 除了 `slice,map,function` 的内建类型,其余的类型都可以作为 `key`, 这是语言内部实现的,不用像 `java` 一样自己重写 `hash` 方法
 - `Struct` 类型里面不包含上述字段的,也可以作为`key`
-
 
