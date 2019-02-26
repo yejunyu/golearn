@@ -3,7 +3,7 @@
 - [总结](#总结)
 
 ### duck typing和面向接口编程
-> 百度百科的解释
+> 百度百科的解释    
 https://baike.baidu.com/item/%E9%B8%AD%E5%AD%90%E7%B1%BB%E5%9E%8B/10845665
 
 自行查看百科,简单的说,就是一个长得像鸭子,而且也有鸭子的特点的,我们就可以称他为鸭子
@@ -45,6 +45,11 @@ func main() {
 简而言之,我只关心接口里提供了什么功能(有什么方法)
 来看一下, download 这个完整的代码
 首先我们有一个 retriever.go 这个包
+先定义一个结构体，右键Generate
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190226155732.png)
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190226155847.png)
+实现刚刚的Retriever接口的Get方法
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190226155958.png)
 ```go
 package mock
 
@@ -138,6 +143,4 @@ fmt.Println(r)
 ### 总结
 - 无须继承也不用关心是什么接口,只需要关心接口提供的功能即可
 - 方法如果是值接收者,既可以接收值也可以接收指针,如果是指针接收者,只能接收指针
-
-
 
