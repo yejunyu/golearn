@@ -7,6 +7,8 @@
 - [goimports](#goimports)
 - [总结](#总结)
 
+[toc]
+
 ### 闭包
 通过一个累加器来看闭包的概念
 
@@ -20,7 +22,7 @@ def fun1():
         sum += v
         return sum
     return fun2
-
+    
 a = fun1()
 for i in range(10):
     print(a(i))
@@ -116,11 +118,10 @@ func fib1() intGen {
 	}
 }
 ```
-把鼠标放到intGen 上,然后右键
-![](http://oqb4aabpb.bkt.clouddn.com/18-8-11/45524464.jpg)
-![](http://oqb4aabpb.bkt.clouddn.com/18-8-11/68743049.jpg)
-![](http://oqb4aabpb.bkt.clouddn.com/18-8-11/73783184.jpg)
-
+把鼠标放到intGen 上,然后右键，实现reader接口
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190228110905.png)
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190228111102.png)
+![](https://raw.githubusercontent.com/yejunyu/gitpic/master/2019/20190228111126.png)
 ```go
 func (g intGen) Read(p []byte) (n int, err error) {
 	// 下一个 fib 数
@@ -155,7 +156,6 @@ printFileContents(f1)
 
 ### goimports
 一个好用的工具
-![](http://oqb4aabpb.bkt.clouddn.com/18-8-11/94132184.jpg)
 能够自动整理imports
 把没用到的去除,用到的,但系统没有的,自动 go get
 但是正常是下不下来的,因为需要下载`golang.org/x/tools/cmd/goimports`,而 `golang.org` 在国内是被墙的
